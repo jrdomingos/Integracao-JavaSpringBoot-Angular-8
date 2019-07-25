@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header> 
+      <div mat-card-avatar>
+        <mat-icon>border_clear</mat-icon>
+    </div> 
+      <mat-card-title>Drag and Drop</mat-card-title>
+      <mat-card-subtitle class="sub">Tasks to do are on the left side and the tasks done are on the left side</mat-card-subtitle>
+    </mat-card-header>     
+    <mat-card-content>          
+        <div class="drag-container">
+          <h2>Task to do</h2>
+        
+          <div
+            cdkDropList
+            #todoList="cdkDropList"
+            [cdkDropListData]="todo"
+            [cdkDropListConnectedTo]="[doneList]"
+            class="drag-list2"
+            (cdkDropListDropped)="drop2($event)">
+            <div class="drag-box2" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+          </div>
+        </div>
+        
+        <div class="drag-container">
+          <h2>Task done</h2>
+        
+          <div
+            cdkDropList
+            #doneList="cdkDropList"
+            [cdkDropListData]="done"
+            [cdkDropListConnectedTo]="[todoList]"
+            class="drag-list2"
+            (cdkDropListDropped)="drop2($event)">
+            <div class="drag-box2" *ngFor="let item of done" cdkDrag>{{item}}</div>
+          </div>
+        </div>
+    </mat-card-content>  
+  </mat-card> 
+  
+  

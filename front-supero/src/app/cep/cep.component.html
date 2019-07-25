@@ -1,0 +1,48 @@
+<mat-card>
+        <mat-card-header> 
+          <div mat-card-avatar>
+            <mat-icon>search</mat-icon>
+        </div> 
+          <mat-card-title>CEP search </mat-card-title>
+          <mat-card-subtitle>Enter your cep code</mat-card-subtitle>
+        </mat-card-header>     
+        <mat-card-content>             
+               <div class="ev">
+                <fieldset [disabled]="isLoading">
+                  <div>                
+                      <mat-form-field class="form-group1">              
+                        <input matInput type="number" id="cep" [(ngModel)]="cep.cep" placeholder="CEP : 00000-000">
+                      </mat-form-field>                          
+                          <button mat-button (click)="search()" [disabled]="isLoading">search</button>      
+                  </div>           
+                  <div>               
+                      <mat-form-field class="form-group2">              
+                        <input matInput type="text" id="logradouro" [(ngModel)]="cep.logradouro" placeholder="Logradouro :">
+                      </mat-form-field>
+                     
+                      <mat-form-field class="form-group3">              
+                        <input matInput type="text" id="numero" [(ngModel)]="cep.complemento" placeholder="Numero :">
+                      </mat-form-field>
+                  </div>
+                  <div>                 
+                      <mat-form-field class="form-group4">              
+                        <input matInput type="text" id="complemento" [(ngModel)]="cep.complemento" placeholder="Complemento">
+                      </mat-form-field>
+                      <mat-form-field class="form-group6">              
+                          <input matInput type="text" id="bairro" [(ngModel)]="cep.bairro" placeholder="Bairro">
+                        </mat-form-field>           
+                  </div>
+                  <div>                
+                      <mat-form-field class="form-group5">              
+                        <input matInput type="text" id="cidade" [(ngModel)]="cep.cidade" placeholder="Cidade">
+                      </mat-form-field>
+                      
+                        <mat-form-field class="form-group7">              
+                            <input matInput type="text" id="estado" [(ngModel)]="cep.estado" placeholder="Estado">
+                          </mat-form-field>            
+                  </div>
+              </fieldset>          
+               </div>
+        </mat-card-content>  
+      </mat-card> 
+      

@@ -1,0 +1,80 @@
+mat-card{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(246, 246, 246); 
+}
+
+.logo{
+  width:30%; 
+  height: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.d02{ 
+    font-size: 50%;
+    color:#000;
+    text-shadow: 1px 1px 1px darkgray;
+} 
+
+
+
+.title{
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  color:#fff;
+  background-color: #334fff;  
+}
+
+.container{  
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form{
+    width: 95%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container > * {
+    width: 100%;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+  @media only screen and (max-width: 600px) {
+     .main{
+      font-size: 60%;
+     }
+
+     button{       
+      font-size: 50%;
+     }
+
+     input{
+       width: 95%;
+       height: auto;
+      font-size: 60%;
+     }
+  }
+
+ 
